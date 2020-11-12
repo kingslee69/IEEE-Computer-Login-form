@@ -1,1 +1,107 @@
-hello
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap'); */
+
+:root {
+  --black: #1b2a4d;
+  --green: #45a049;
+  --red: #ff0000;
+  --brand: #ffb900;
+  --highlight: #ffbb001c;
+  --secondary: #ccc;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: var(--black);
+}
+
+.hero-banner {
+  height: 100vh;
+  background-color: var(--red);
+  display: flex;
+
+  background: linear-gradient(
+      0deg,
+      #806113b0 5%,
+      #ffb900 76.04%,
+      #ffb900 76.05%
+    ),
+    url(images/banner1.jpg) center;
+  position: relative;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  max-width: 600px;
+  align-self: center;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* min-width: 250px; */
+}
+
+.container > * {
+  margin-top: 20px;
+}
+
+input[type='password'],
+input[type='text'] {
+  width: 100%;
+  /* check back later */
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  outline: none;
+  background-color: var(--highlight);
+  transition: linear, 0.5s ease-in-out;
+}
+
+input:focus {
+  /* outline: 0.5px solid var(--brand); */
+
+  outline: 0.5px solid var(--brand);
+  background-color: white;
+}
+
+input:after {
+  outline: none;
+  background-color: var(--highlight);
+}
+
+#submit {
+  background-color: var(--brand);
+  width: 100%;
+  /* check back later */
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: linear, 0.3s ease-in-out;
+  opacity: 0.8;
+  /* check back later */
+}
+
+#submit:hover {
+  opacity: 1;
+}
+
+.brand {
+  color: var(--brand);
+  cursor: pointer;
+}
+
+.small-text {
+  font-size: 14px;
+  font-weight: 200;
+}
