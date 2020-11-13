@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Form</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <section class= "hero-banner">
-        <div  class="container">
+    <section class="hero-banner">
+      <div id="form" class="container">
+            <i onclick ="document.getElementById('form').style.display = 'none'" class="fa fa-times ex" aria-hidden="true"></i>
             <h2>IEEE Computer Society</h2>
             <form action="">
-                <!-- <label for="username">Username:</label><br /> -->
                 <input
                 type="text"
                 id="username"
                 placeholder="Enter username or email"
-                /><br />
+                />
                 
-                <!-- <label for="password">Password:</label><br /> -->
-                <input type="password" id="password" placeholder="Enter Password" /><br />
+                <input type="password" id="password" placeholder="Enter Password" />
                 
                 <button id="submit" type="submit" value="submit">Log in</button>
             </form>
@@ -28,6 +32,33 @@
             </form>
         </div>
 
+      <div class="tile">
+        <div class ="sub-tile">
+          <h2 id="welcome-bot" class="text-light">Welcome Back!</h2>
+          <button onclick ="document.getElementById('form').style.display = 'block'" id="login" class="btn-sm">Log in</button>
+        </div>
+      </div>
     </section>
+
+    <script>
+      const welcomeMessage = [
+        'Hello world!',
+        'Yo, glad to see you again',
+        'Welcome, I gat your sisters here with me.',
+        "Have you seen the Mulan movie? you should. For now, You're welcome.",
+        'You don chop? edible arrangement dey. Login',
+        '..zzz',
+        'omo!',
+        'We need 200K to conduct prayers next week.',
+        'ABT >>>> MIL',
+        "Let's do great things together.",
+        "Don't hate, all na cruise.",
+        'God no go shame us.',
+      ];
+      document.getElementById('welcome-bot').innerHTML =
+        welcomeMessage[Math.floor(Math.random() * 12)];
+
+   
+    </script>
   </body>
 </html>

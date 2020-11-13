@@ -22,38 +22,85 @@ body {
 
 .hero-banner {
   height: 100vh;
-  background-color: var(--red);
   display: flex;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background: linear-gradient(180deg, #4808be75 1%, var(--brand) 76.04%),
     url(images/banner1.jpg) center;
 
   position: relative;
 }
 
+.tile {
+  width: 100%;
+  position: absolute;
+  top: 50vh;
+  text-align: center;
+}
+
+.sub-tile {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+}
+
 .container {
+  display: none;
+  margin: 40px;
   border-radius: 5px;
   padding: 20px;
+  padding-top: 30px;
   background-color: white;
-  max-width: 600px;
+  max-width: 350px;
   align-self: center;
-  justify-self: center;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   box-shadow: #2c292936 0px 10px 15px;
   transition: linear, 0.3s ease-in-out;
-  /* min-width: 250px; */
+  min-width: 250px;
+  z-index: 1;
+}
+
+.disapear {
+  display: 'none';
 }
 
 .container:hover {
   box-shadow: none;
-  transform: translateY(6px);
 }
 
 .container > * {
   margin-top: 20px;
   /* transition: linear, 0.5s ease-in-out; */
+}
+
+.btn-sm {
+  background-color: white;
+  width: 50%;
+  /* check back later */
+  padding: 9px 15px;
+  color: var(--brand);
+  font-weight: 500;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: linear, 0.5s ease-in-out;
+  box-shadow: #2c292936 0px 10px 15px;
+  /* check back later */
+}
+
+.btn-sm:hover {
+  box-shadow: none;
+  transform: translateY(6px);
+}
+
+.text-light {
+  color: white;
 }
 
 input[type='password'],
@@ -108,4 +155,23 @@ input:after {
 .small-text {
   font-size: 13px;
   font-weight: 400;
+}
+
+.ex {
+  position: relative;
+  top: -10px;
+  float: right;
+  color: red;
+  font-weight: 700;
+  margin: 5px;
+}
+
+#welcome-bot {
+  line-height: 150%;
+}
+
+@media (max-width: 400px) {
+  .container {
+    max-width: 280px;
+  }
 }
