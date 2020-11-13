@@ -27,9 +27,10 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: linear-gradient(180deg, #4808be75 1%, var(--brand) 76.04%),
-    url(images/banner1.jpg) center;
+  /* background: linear-gradient(180deg, #4808be75 1%, var(--brand) 76.04%),
+    url(images/banner1.jpg) center; */
 
+  background-color: var(--brand);
   position: relative;
 }
 
