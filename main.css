@@ -1,11 +1,11 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap'); */
 
 :root {
-  --black: #1b2a4d;
+  --black: #373b46;
   --green: #45a049;
   --red: #ff0000;
-  --brand: #ffb900;
-  --highlight: #ffbb001c;
+  --brand: #007dff;
+  --highlight: #ac92dd23;
   --secondary: #ccc;
 }
 
@@ -25,13 +25,9 @@ body {
   background-color: var(--red);
   display: flex;
 
-  background: linear-gradient(
-      0deg,
-      #806113b0 5%,
-      #ffb900 76.04%,
-      #ffb900 76.05%
-    ),
+  background: linear-gradient(180deg, #4808be75 1%, var(--brand) 76.04%),
     url(images/banner1.jpg) center;
+
   position: relative;
 }
 
@@ -45,11 +41,19 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  box-shadow: #2c292936 0px 10px 15px;
+  transition: linear, 0.3s ease-in-out;
   /* min-width: 250px; */
+}
+
+.container:hover {
+  box-shadow: none;
+  transform: translateY(6px);
 }
 
 .container > * {
   margin-top: 20px;
+  /* transition: linear, 0.5s ease-in-out; */
 }
 
 input[type='password'],
@@ -68,7 +72,7 @@ input[type='text'] {
 input:focus {
   /* outline: 0.5px solid var(--brand); */
 
-  outline: 0.5px solid var(--brand);
+  outline: 1.5px solid var(--brand);
   background-color: white;
 }
 
@@ -87,7 +91,7 @@ input:after {
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
-  transition: linear, 0.3s ease-in-out;
+  transition: linear, 0.5s ease-in-out;
   opacity: 0.8;
   /* check back later */
 }
@@ -102,6 +106,6 @@ input:after {
 }
 
 .small-text {
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 13px;
+  font-weight: 400;
 }
